@@ -1,58 +1,12 @@
-# 🏗 Scaffold-ETH
+## Growic Solidity Bootcamp
 
-> everything you need to build on Ethereum! 🚀
+# Fork of Scaffold-ETH to use with bootcamp challenges and experiments
 
-🧪 Quickly experiment with Solidity using a frontend that adapts to your smart contract:
-
-![image](https://user-images.githubusercontent.com/2653167/124158108-c14ca380-da56-11eb-967e-69cde37ca8eb.png)
-
-
-# 🏄‍♂️ Quick Start
-
-Prerequisites: [Node (v18 LTS)](https://nodejs.org/en/download/) plus [Yarn (v1.x)](https://classic.yarnpkg.com/en/docs/install/) and [Git](https://git-scm.com/downloads)
-
-🚨 If you are using a version < v18 you will need to remove `openssl-legacy-provider` from the `start` script in `package.json`
-
-> clone/fork 🏗 scaffold-eth:
-
-```bash
-git clone https://github.com/scaffold-eth/scaffold-eth.git
-```
-
-> install and start your 👷‍ Hardhat chain:
-
-```bash
-cd scaffold-eth
-yarn install
-yarn chain
-```
-
-> in a second terminal window, start your 📱 frontend:
-
-```bash
-cd scaffold-eth
-yarn start
-```
-
-> in a third terminal window, 🛰 deploy your contract:
-
-```bash
-cd scaffold-eth
-yarn deploy
-```
-
-🔏 Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
-
-📝 Edit your frontend `App.jsx` in `packages/react-app/src`
-
-💼 Edit your deployment scripts in `packages/hardhat/deploy`
-
-📱 Open http://localhost:3000 to see the app
+---------------------------------------------------------
 
 # 📚 Documentation
 
 Documentation, tutorials, challenges, and many more resources, visit: [docs.scaffoldeth.io](https://docs.scaffoldeth.io)
-
 
 # 🍦 Other Flavors
 - [scaffold-eth-typescript](https://github.com/scaffold-eth/scaffold-eth-typescript)
@@ -63,7 +17,6 @@ Documentation, tutorials, challenges, and many more resources, visit: [docs.scaf
 - [eth-components](https://github.com/scaffold-eth/eth-components)
 - [scaffold-eth-expo](https://github.com/scaffold-eth/scaffold-eth-expo)
 - [scaffold-eth-truffle](https://github.com/trufflesuite/scaffold-eth)
-
 
 
 # 🔭 Learning Solidity
@@ -111,14 +64,4 @@ Check out all the [active branches](https://github.com/scaffold-eth/scaffold-eth
 # 🏃💨 Speedrun Ethereum
 Register as a builder [here](https://speedrunethereum.com) and start on some of the challenges and build a portfolio.
 
-# 💬 Support Chat
 
-Join the telegram [support chat 💬](https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA) to ask questions and find others building with 🏗 scaffold-eth!
-
----
-
-🙏 Please check out our [Gitcoin grant](https://gitcoin.co/grants/2851/scaffold-eth) too!
-
-### Automated with Gitpod
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#github.com/scaffold-eth/scaffold-eth)
