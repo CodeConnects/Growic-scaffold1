@@ -38,7 +38,7 @@ export default function ExampleUI({
             onClick={async () => {
               /* look how you call setPurpose on your contract: */
               /* notice how you pass a call back for tx updates too */
-              const result = tx(writeContracts.PrimitiveDataTypes.setPurpose(newPurpose), update => {
+              const result = tx(writeContracts.SaveBalance.setPurpose(newPurpose), update => {
                 console.log("📡 Transaction Update:", update);
                 if (update && (update.status === "confirmed" || update.status === 1)) {
                   console.log(" 🍾 Transaction " + update.hash + " finished!");
@@ -84,7 +84,7 @@ export default function ExampleUI({
         <Divider />
         Your Contract Address:
         <Address
-          address={readContracts && readContracts.PrimitiveDataTypes ? readContracts.PrimitiveDataTypes.address : null}
+          address={readContracts && readContracts.SaveBalance ? readContracts.SaveBalance.address : null}
           ensProvider={mainnetProvider}
           fontSize={16}
         />
@@ -93,7 +93,7 @@ export default function ExampleUI({
           <Button
             onClick={() => {
               /* look how you call setPurpose on your contract: */
-              tx(writeContracts.PrimitiveDataTypes.setPurpose("🍻 PDT"));
+              tx(writeContracts.SaveBalance.setPurpose("🍻 SB"));
             }}
           >
             Set Purpose to &quot;🍻 Cheers&quot;
@@ -107,7 +107,7 @@ export default function ExampleUI({
               here we are sending value straight to the contract's address:
             */
               tx({
-                to: writeContracts.PrimitiveDataTypes.address,
+                to: writeContracts.SaveBalance.address,
                 value: utils.parseEther("0.001"),
               });
               /* this should throw an error about "no fallback nor receive function" until you add it */
@@ -121,7 +121,7 @@ export default function ExampleUI({
             onClick={() => {
               /* look how we call setPurpose AND send some value along */
               tx(
-                writeContracts.PrimitiveDataTypes.setPurpose("💵 Paying for this one!", {
+                writeContracts.SaveBalance.setPurpose("💵 Paying for this one!", {
                   value: utils.parseEther("0.001"),
                 }),
               );
@@ -136,9 +136,9 @@ export default function ExampleUI({
             onClick={() => {
               /* you can also just craft a transaction and send it to the tx() transactor */
               tx({
-                to: writeContracts.PrimitiveDataTypes.address,
+                to: writeContracts.SaveBalance.address,
                 value: utils.parseEther("0.001"),
-                data: writeContracts.PrimitiveDataTypes.interface.encodeFunctionData("setPurpose(string)", [
+                data: writeContracts.SaveBalance.interface.encodeFunctionData("setPurpose(string)", [
                   "🤓 Whoa so 1337!",
                 ]),
               });
@@ -152,11 +152,11 @@ export default function ExampleUI({
 
       {/*
         📑 Maybe display a list of events?
-          (uncomment the event and emit line in PrimitiveDataTypes.sol! )
+          (uncomment the event and emit line in SaveBalance.sol! )
       */}
       <Events
         contracts={readContracts}
-        contractName="PrimitiveDataTypes"
+        contractName="SaveBalance"
         eventName="SetPurpose"
         localProvider={localProvider}
         mainnetProvider={mainnetProvider}
