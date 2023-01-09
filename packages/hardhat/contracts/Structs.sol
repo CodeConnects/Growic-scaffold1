@@ -17,12 +17,18 @@ contract Structs {
         string name;
         uint256 age;
     }
+
+    // todo why have both of these
     mapping(address => UserDetail) public addrDetails;
     UserDetail public userDetails[];
 
 
 
 /********************* Structs section *********************/
+/* This task extends the functionality of the previous contract
+    by allowing users to save their additional info 
+    into the smart contract as a KYC measure.
+*/
 
     // save details of user calling smart contract
     // save them into a defined struct
