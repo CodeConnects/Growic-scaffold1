@@ -44,6 +44,9 @@ contract Structs {
         return addrDetails[msg.sender];
     }
 
+    // todo where is usage of the userDetails array?
+    
+
 /********************* Mappings section functions *********************/
 
     function deposit (uint256 amount) public {
